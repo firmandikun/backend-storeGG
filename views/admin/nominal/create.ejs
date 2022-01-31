@@ -1,0 +1,85 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/navbar.ejs %>
+<%- include ../../partials/sidebar.ejs %>
+
+
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Kategori</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="/nominal">nominal</a></li>
+              <li class="breadcrumb-item active">nominal</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="card card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">Form Tambah Kategori</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form action="/nominal/create" method="post">
+                        <div class="card-body">
+                          <div class="form-group">
+                            <label>Nama Koin</label>
+                            <select class="form-control select2" style="width: 100%;" name="coinName" required >
+                              <option selected="selected">Pilih Koin</option>
+                              <option value="Gold">Gold</option>
+                              <option value="Diamond">Diamond</option>
+                              <option value="Jawel">Jawel</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="coinQuantity">Masukan nama kategori</label>
+                            <input type="number" name="coinQuantity" class="form-control" id="coinQuantity" placeholder="Masukan Jumlah Koin" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="price">Masukan nama kategori</label>
+                            <input type="number" name="price" class="form-control" id="price" placeholder="Masukan Harga" required>
+                          </div>
+                        </div>
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
+                  </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <%- include ../../partials/footer.ejs %>
+  <%- include ../../partials/js.ejs %>
+
+
+
+
+
+
